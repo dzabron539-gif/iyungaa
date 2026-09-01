@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS iyunga_school
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE iyunga_school;
+
+CREATE TABLE IF NOT EXISTS students (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(150) NOT NULL,
+    gender ENUM('Male','Female') NOT NULL,
+    dob DATE NOT NULL,
+    `class` VARCHAR(30) NOT NULL,
+    phone VARCHAR(30) DEFAULT NULL,
+    email VARCHAR(150) DEFAULT NULL,
+    address VARCHAR(255) DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
